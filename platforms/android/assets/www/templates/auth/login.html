@@ -1,0 +1,27 @@
+<ion-view view-title="Login" class="pane">
+  <ion-content style="background-image:url('img/App_Background_02.jpg') no-repeat; background-size:cover;">
+
+    <form name="myForm" ng-submit="doLogin($event)">
+        <div id="logo" style="padding-left:30%">
+      <img src="img/Krishi_logo_Text_tr.png">
+    </div>
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Mobile Number</span>
+          <input type="text" ng-model="authData.phone" ng-minlength="10" ng-maxlength="10" name="phone" required>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="authData.password" name="password" required>
+        </label>
+         <p style="color:#552244;" ng-show="((myForm.phone.$error.minlength || myForm.phone.$error.maxlength) && myForm.phone.$dirty) ">phone number should be 10 digits</p>        
+        <label class="item item-input item-stacked-label">
+          <button class="button button-block button-calm" type="submit" ng-disabled="myForm.$invalid">Log in</button>   
+        </label>    
+        <lable class="item">
+        <p style="text-align:center;">Dont have an account? <a href="#/signup"> Signup </a>here </p>
+        <p style="text-align:center;"> click here to reset <a href="#/forgot"> forgot Password </a></p>  
+        </lable>
+      </div>
+    </form>
+  </ion-content>

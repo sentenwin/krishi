@@ -1,0 +1,32 @@
+<ion-view view-title="Signup">
+  <ion-content>
+        <div style="color:#FFFFFF; background-color:#00C853; text-align:center;">
+        <h3 style="color:white">Signup Here</h3>
+      </div>
+    <form name="myForm" ng-submit="doSignup()" style="top-margin:50px;">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label ">Name</span>
+          <input type="text" ng-model="authData.name" name="name" required>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Aadhar Number</span>
+          <input type="text" ng-model="authData.adhar" name="aadhar" required>
+        </label>
+         <label class="item item-input item-stacked-label">
+          <span class="input-label">Mobile Number</span>
+          <input type="text" ng-model="authData.phone" ng-minlength="10" ng-maxlength="10" name="phone" required>
+        </label>       
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="authData.password" name="password" required>
+        </label>        
+         <p style="color:#552244;" ng-show="((myForm.phone.$error.minlength || myForm.phone.$error.maxlength) && myForm.phone.$dirty) ">phone number should be 10 digits</p>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit" ng-disabled="myForm.$invalid">Signup</button>
+        </label>
+         <lable class="item">
+        <p style="text-align:center;">Already have an account? <a href="#/login"> Login </a>here </p>  
+        </lable>       
+      </div>
+    </form>
+  </ion-content>

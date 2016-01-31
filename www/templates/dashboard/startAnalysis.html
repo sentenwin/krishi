@@ -1,0 +1,31 @@
+<ion-view view-title="Crop Analysis">
+  <ion-content>
+	<div class="list card">
+
+   <form name="myForm" ng-submit="showMeData()">
+      <div class="list">
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Crop Cycle
+          </div>
+          <select ng-model="cropData.cropCycle">
+            <option>Summer</option>
+            <option selected>Spring</option>
+            <option>Autumn</option>
+            <option>Winter</option>
+          </select>
+        </label>      
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Current Crop</span>
+          <input type="text" ng-model="cropData.currentCrop" name="currentCrop" required>
+        </label>      
+        <label class="item item-input item-stacked-label">
+          <button class="button button-block button-calm" type="submit" ng-disabled="myForm.$invalid">Show Me Analysis</button>   
+        </label>    
+        <lable class="item"> 
+        </lable>
+      </div>
+    </form>
+</div>
+  </ion-content>
+</ion-view>

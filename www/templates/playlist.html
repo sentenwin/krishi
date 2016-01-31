@@ -1,0 +1,28 @@
+<ion-view view-title={{cropDetails.title}}>
+  <ion-content>
+
+<div class="list card">
+
+  <div class="item item-avatar">
+    <img ng-src="{{cropDetails.img}}">
+    <h2>{{cropDetails.title}}</h2>
+    <p>November 05, 1955</p>
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" ng-src="{{cropDetails.img}}">
+    <h2> Description </h2>
+    <p>
+     {{cropDetails.description}}
+    </p>
+    <h2> Condition </h2>
+    <p>
+     {{cropDetails.condition}}
+    </p>
+  </div>
+
+</div>
+
+      </ion-content>
+    </ion-view>
+    

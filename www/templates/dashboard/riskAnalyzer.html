@@ -1,0 +1,22 @@
+<ion-view view-title="Risk Analyzer">
+  <ion-content>
+  <div class="item item-avatar">
+    <h2>Analyze Your Risk</h2>
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" ng-src="img/Farmer_04.jpg">
+<ion-list>
+  <ion-radio ng-model="choice" ng-value="'A'">High (Max [Profit & Risk)</ion-radio>
+  <ion-radio ng-model="choice" ng-value="'B'">Medium </ion-radio>
+    <ion-radio ng-model="choice" ng-value="'B'">Low </ion-radio>
+        <label class="item item-input item-stacked-label">
+          <button class="button button-block button-calm" ng-click="analysRisk()">Proceed</button>   
+        </label>     
+</ion-list>
+    <p>
+  </div>
+
+</div>
+  </ion-content>
+</ion-view>

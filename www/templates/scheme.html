@@ -1,0 +1,29 @@
+<ion-view view-title={{scheme.title}}>
+  <ion-content>
+  <div class="item item-body">
+
+  <h3>Best Insurence Scheme crafted for you</h3>
+  </div>
+<div class="list card">
+
+  <div class="item item-avatar">
+    <img ng-src="{{scheme.img}}">
+    <h2>{{scheme.title}}</h2>
+  </div>
+
+  <div class="item item-body">
+    <h2> Description </h2>
+    <p>
+     {{scheme.description}}
+    </p>
+    <h2> Premium </h2>
+    <p>
+     {{scheme.premium}}
+    </p>
+  </div>
+    <button class="button button-block button-calm" ng-click="takeScheme()">Take Scheme</button> 
+</div>
+
+      </ion-content>
+    </ion-view>
+    
