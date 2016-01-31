@@ -1,0 +1,22 @@
+<ion-view view-title="Krishi">
+  <ion-content>
+	<div class="list card">
+
+  <div class="item item-avatar">
+    <img src="img/Krishi_Logo.jpg">
+    <h2>Weather Forecast</h2>
+  </div>
+
+  <div class="item item-body">
+    <h3>Welcome to {{CityInfo.city}}</h3>
+    <h4>Current Weather:</h4>
+      <p><weather-icon icon="current.icon" id="current-icon"></weather-icon> {{CityInfo.current}}</p>
+    <h4>Temperature:</h4>
+      <p>{{CityInfo.temperature}} °C</p>
+    <h4>Coming Days:</h4>
+      <p>{{CityInfo.forecast}}</p>
+  </div>
+          <button class="button button-block button-calm" ng-click='startAnalysis()'>Start Analysis</button>
+</div>
+  </ion-content>
+</ion-view>

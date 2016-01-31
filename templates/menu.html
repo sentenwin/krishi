@@ -1,0 +1,50 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-balanced">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-content>
+                 <ion-item menu-close class="item item-avatar" href="#/app/profile/personal" >
+
+                    <img ng-src="img/Krishi_Logo.jpg" width="100%" ng-click="showAvatar()" />                  
+                    <div href="#/app/profile/personal" class="item-text-wrap" >
+                        <h2 >Hi Farmer</h2>
+                        <p >Welcome to Krishi</p>
+                    </div>
+
+                </ion-item>   
+      <ion-list>
+          <ion-item menu-close href="#/app/dashboard">
+          Dashboard
+        </ion-item>    
+        <ion-item menu-close href="#/app/playlists">
+          Crop Details
+        </ion-item>        
+        <ion-item menu-close href="#/app/search">
+          Risk Analyzer
+        </ion-item>
+        <ion-item menu-close href="#/app/browse">
+          Insurence Scheme
+        </ion-item>
+        <ion-item menu-close ng-click="doLogout()">
+          Logout
+        </ion-item>
+      </ion-list>
+    </ion-content>
+     <ion-footer-bar class="bar-positive">
+        <button class="button button-clear ion-help" ng-click="showIntro()"></button>
+        <div class="title"> Krishi 1.0</div>
+        <button class="button button-clear ion-gear-a" ng-click="showSettings()"></button>
+    </ion-footer-bar>   
+  </ion-side-menu>
+</ion-side-menus>
